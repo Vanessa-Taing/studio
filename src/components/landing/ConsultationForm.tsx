@@ -3,7 +3,7 @@
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { consultationSchema, type ConsultationData } from "@/app/actions";
+import { consultationSchema, type ConsultationData } from "@/lib/schema";
 import { submitConsultationRequest } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
 
