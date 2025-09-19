@@ -43,7 +43,7 @@ export default function ConsultationForm() {
       if (result.success) {
         toast({
           title: "Success!",
-          description: result.message,
+          description: "Your request has been sent. I'll get back to you shortly!",
         });
         form.reset();
       } else {
@@ -79,36 +79,23 @@ export default function ConsultationForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Work Email</FormLabel>
+                <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="john.doe@company.com" {...field} />
+                  <Input placeholder="john.doe@example.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <FormField
-            control={form.control}
-            name="company"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Company Name</FormLabel>
-                <FormControl>
-                  <Input placeholder="Acme Inc." {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
+           <FormField
             control={form.control}
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message (Optional)</FormLabel>
+                <FormLabel>Project Details</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Tell us about your project and what you're looking to achieve."
+                    placeholder="Tell me about your project, your goals, and your budget."
                     className="resize-none"
                     {...field}
                   />
@@ -121,7 +108,7 @@ export default function ConsultationForm() {
         <CardFooter>
           <Button type="submit" className="w-full" disabled={isPending}>
             {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-            {isPending ? "Submitting..." : "Request Consultation"}
+            {isPending ? "Sending..." : "Send Request"}
           </Button>
         </CardFooter>
       </form>

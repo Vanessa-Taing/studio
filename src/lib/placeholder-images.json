@@ -1,28 +1,46 @@
 {
   "placeholderImages": [
     {
-      "id": "quantum-logo",
-      "description": "Logo for QuantumLeap Inc.",
-      "imageUrl": "https://picsum.photos/seed/quantum/140/60",
-      "imageHint": "tech logo"
+      "id": "portfolio-1",
+      "description": "Portfolio project 1 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/p1/500/350",
+      "imageHint": "website design"
     },
     {
-      "id": "stellar-logo",
-      "description": "Logo for Stellar Solutions",
-      "imageUrl": "https://picsum.photos/seed/stellar/140/60",
-      "imageHint": "corporate logo"
+      "id": "portfolio-2",
+      "description": "Portfolio project 2 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/p2/500/350",
+      "imageHint": "web application"
     },
     {
-      "id": "nexus-logo",
-      "description": "Logo for Nexus Corp",
-      "imageUrl": "https://picsum.photos/seed/nexus/140/60",
-      "imageHint": "modern logo"
+      "id": "portfolio-3",
+      "description": "Portfolio project 3 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/p3/500/350",
+      "imageHint": "ecommerce store"
     },
     {
-      "id": "abstract-hero",
-      "description": "Abstract graphic for hero section",
-      "imageUrl": "https://picsum.photos/seed/hero-abstract/600/600",
-      "imageHint": "abstract technology"
+      "id": "portfolio-4",
+      "description": "Portfolio project 4 thumbnail",
+      "imageUrl": "https://picsum.photos/seed/p4/500/350",
+      "imageHint": "mobile app design"
+    },
+    {
+      "id": "avatar-sarah",
+      "description": "Avatar for Sarah Johnson",
+      "imageUrl": "https://picsum.photos/seed/sarah/80/80",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "avatar-michael",
+      "description": "Avatar for Michael Chen",
+      "imageUrl": "https://picsum.photos/seed/michael/80/80",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "avatar-jessica",
+      "description": "Avatar for Jessica Rodriguez",
+      "imageUrl": "https://picsum.photos/seed/jessica/80/80",
+      "imageHint": "woman smiling"
     }
   ]
 }

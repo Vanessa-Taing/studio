@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Stratosphere Cloud',
-  description: 'Powering the Enterprise with Limitless Cloud Infrastructure',
+  title: 'Modern Web Designs',
+  description: 'Beautiful, Modern & Responsive Website Design.',
 };
 
 export default function RootLayout({

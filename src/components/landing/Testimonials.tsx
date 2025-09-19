@@ -11,43 +11,41 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 
 const testimonials = [
   {
-    quote: "Stratosphere Cloud has been a game-changer for our infrastructure. The scalability and performance are unmatched, allowing us to serve our customers better than ever before.",
-    name: "Jane Doe",
-    title: "CTO, QuantumLeap Inc.",
-    logoId: "quantum-logo"
+    quote: "The new website is fantastic! It's clean, modern, and perfectly captures our brand. The team was a pleasure to work with.",
+    name: "Sarah Johnson",
+    title: "CEO, Innovate Co.",
+    avatarId: "avatar-sarah"
   },
   {
-    quote: "The migration process was seamless, and the support team was incredibly responsive. Stratosphere's robust security features give us peace of mind. Highly recommended for any enterprise.",
-    name: "John Smith",
-    title: "CEO, Stellar Solutions",
-    logoId: "stellar-logo"
+    quote: "I'm so impressed with the final result. The design is beautiful and the user experience is seamless. Highly recommended!",
+    name: "Michael Chen",
+    title: "Founder, Startup Hub",
+    avatarId: "avatar-michael"
   },
   {
-    quote: "We've seen a 40% reduction in our operational costs since moving to Stratosphere Cloud. Their predictable pricing and powerful analytics have been instrumental in our growth.",
-    name: "Emily White",
-    title: "Head of Engineering, Nexus Corp",
-    logoId: "nexus-logo"
+    quote: "Working with them was a game-changer. They understood our vision and delivered a website that exceeded our expectations.",
+    name: "Jessica Rodriguez",
+    title: "Marketing Director, Creative Solutions",
+    avatarId: "avatar-jessica"
   },
 ];
 
-const getLogoUrl = (id: string) => {
+const getAvatarUrl = (id: string) => {
   return PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
-}
-const getLogoHint = (id: string) => {
-    return PlaceHolderImages.find(img => img.id === id)?.imageHint || '';
 }
 
 export default function Testimonials() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
+    <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Trusted by Industry Leaders</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">What Clients Are Saying</h2>
           <p className="mt-4 text-muted-foreground md:text-xl/relaxed">
-            See how leading enterprise companies are innovating with Stratosphere Cloud.
+            Real stories from satisfied clients who have seen real results.
           </p>
         </div>
 
@@ -70,21 +68,17 @@ export default function Testimonials() {
                 <div className="p-4 h-full">
                   <Card className="h-full flex flex-col">
                     <CardContent className="flex flex-col items-start justify-between flex-1 p-6">
-                        <blockquote className="text-lg font-semibold leading-snug">
+                        <blockquote className="text-lg leading-snug text-foreground/80">
                           “{testimonial.quote}”
                         </blockquote>
-                        <div className="mt-6 w-full">
-                            <div className="font-semibold">{testimonial.name}</div>
-                            <div className="text-sm text-muted-foreground">{testimonial.title}</div>
-                            <div className="mt-4 border-t pt-4">
-                                <Image 
-                                    src={getLogoUrl(testimonial.logoId)} 
-                                    alt={`${testimonial.title} Logo`}
-                                    data-ai-hint={getLogoHint(testimonial.logoId)}
-                                    width={140}
-                                    height={60}
-                                    className="object-contain"
-                                />
+                        <div className="mt-6 flex items-center gap-4">
+                            <Avatar>
+                                <AvatarImage src={getAvatarUrl(testimonial.avatarId)} alt={testimonial.name} />
+                                <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                            </Avatar>
+                            <div>
+                                <div className="font-semibold">{testimonial.name}</div>
+                                <div className="text-sm text-muted-foreground">{testimonial.title}</div>
                             </div>
                         </div>
                     </CardContent>
