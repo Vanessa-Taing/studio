@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "quantum-logo",
+      "description": "Logo for QuantumLeap Inc.",
+      "imageUrl": "https://picsum.photos/seed/quantum/140/60",
+      "imageHint": "tech logo"
+    },
+    {
+      "id": "stellar-logo",
+      "description": "Logo for Stellar Solutions",
+      "imageUrl": "https://picsum.photos/seed/stellar/140/60",
+      "imageHint": "corporate logo"
+    },
+    {
+      "id": "nexus-logo",
+      "description": "Logo for Nexus Corp",
+      "imageUrl": "https://picsum.photos/seed/nexus/140/60",
+      "imageHint": "modern logo"
+    },
+    {
+      "id": "abstract-hero",
+      "description": "Abstract graphic for hero section",
+      "imageUrl": "https://picsum.photos/seed/hero-abstract/600/600",
+      "imageHint": "abstract technology"
+    }
+  ]
 }
